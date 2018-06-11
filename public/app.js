@@ -51,4 +51,10 @@ function remove(id) {
     div.parentNode.removeChild(div);
 };
 
+//onclick events
+
+document.getElementById('submit').addEventListener('click', functionPlaceholder);
+
+document.getElementById('delete').addEventListener('click', functionPlaceholder);
+
 
