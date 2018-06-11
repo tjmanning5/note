@@ -15,7 +15,7 @@ module.exports = function (app) {
 
     });
 
-    app.get('note/:id', function (req, res) {
+    app.get('/note/:id', function (req, res) {
 
         Note.findOne({ _id: req.params.id }, function (err, note) {
 
@@ -25,9 +25,9 @@ module.exports = function (app) {
         });
     });
 
-    app.delete('/note', function (req, res) {
+    app.delete('/note/:id', function (req, res) {
 
-        Note.deleteOne({ _id: req.body.id }, function (err, note) {
+        Note.deleteOne({ _id: req.params.id }, function (err, note) {
 
             if (err) throw err;
 

@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URL);
 
 const port = process.env.PORT || 3000;
 
-const routes = require('./routes.js')(app);
+const routes = require('./controllers/apiController.js')(app);
 const setup = require('./controllers/setupNoteController.js')(app);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
