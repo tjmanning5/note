@@ -39,4 +39,8 @@ module.exports = function (app) {
 
     });
 
+    app.get('/notes/', function(req, res) {
+        Note.find({}, function(err, note){})
+    })
+
 }
