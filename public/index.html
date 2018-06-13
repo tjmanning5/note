@@ -4,11 +4,11 @@
 
 <head>
     <title>Note Comment</title>
-    <script src="app.js" type="text/javascript" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+
     <div class="header">
         <h1>Note taking app</h1>
         <h2>Keep your notes in one easy to access spot</h2>
@@ -32,10 +32,16 @@
 
     </div>
 
-    <div id="postedComments" class="postedComments">
+    <div class="postedComments">
         <h1 class="postedNotesTitle">Posted Notes</h1>
+        <div id="postedComments"></div>
 
     </div>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js" type="text/javascript" defer></script>
 </body>
+
 
 </html>

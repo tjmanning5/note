@@ -5,6 +5,8 @@ require('dotenv-safe').config();
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'));
+
 // const MongoClient = require('mongodb').MongoClient;
 // const url = process.env.MONGODB_URL;
 

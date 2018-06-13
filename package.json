@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tjmanning5/note#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "dotenv-safe": "^5.0.1",
     "express": "^4.16.3",
     "mongodb": "^3.0.10",

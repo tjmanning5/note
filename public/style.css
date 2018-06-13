@@ -1,8 +1,9 @@
 body {
     background-color: #EDF5E1;
     margin: 0px;
-    font-family: "helvetica", sans-serif;
+    font-family: "helvetica", sans-serif;   
 }
+
 
 .header h2 {
     color: #EDF5E1;
@@ -36,7 +37,7 @@ body {
     
 }
 
-.subButton {
+button {
     font-size: 18px;
     border: none;
     padding: 15px 30px;
@@ -47,7 +48,7 @@ body {
     background-color: #379683;
     color: #EDF5E1;
 }
-.subButton:hover {
+button:hover {
     background-color: #05386B;
     color: #EDF5E1;
 }

@@ -1,5 +1,3 @@
-//function constructor?
-
 var i = 0;
 
 //grab text from input
@@ -17,21 +15,7 @@ function save() {
 
     //place comment in to a div element on page  
 
-    var commentDiv = document.createElement('div');
-    commentDiv.setAttribute('id', 'results._id');
-    var commentText = document.createElement('p');
-    var commentNode = document.createTextNode('result.text');
-    var deleteButton = document.createElement('button');
-    deleteButton.setAttribute('id', i)
-    commentText.appendChild(commentNode);
-    commentDiv.appendChild(commentText);
-    commentDiv.appendChild(deleteButton);
-    document.getElementById('postedComments').appendChild(commentDiv);
-    document.addEventListener('click', function (e) {
-        if (e.target && e.target.id == i) {
-            remove(e.target);
-        }
-    });
+
 
 
     //give comment a date/time
@@ -40,21 +24,59 @@ function save() {
 };
 
 
+function remove(element) {
+    var id = element.parentNode.id;
+    axios.delete('/note/' + id).then(function (response) {
+        displayNotes();
+    });
 
-
-
-
-//delete function
-function remove(id) {
-    console.log('remove');
-    var div = document.getElementById(id);
-    div.parentNode.removeChild(div);
 };
 
-//onclick events
+var displayNotes = function () {
 
-document.getElementById('submit').addEventListener('click', functionPlaceholder);
+    document.getElementById('postedComments').innerHTML = '';
 
-document.getElementById('delete').addEventListener('click', functionPlaceholder);
+    axios.get('/notes').then(function (response) {
+
+        console.log(response.data);
+
+        for (var i = 0; i < response.data.length; i++) {
+
+            var commentDiv = document.createElement('div');
+
+            commentDiv.setAttribute('id', response.data[i]._id);
+
+            var commentText = document.createElement('p');
+
+            var commentNode = document.createTextNode(response.data[i].text);
+
+            var deleteButton = document.createElement('button');
+
+            deleteButton.setAttribute('onclick', 'remove(this)')
+
+            var buttonText = document.createTextNode('Delete Post');
+
+            deleteButton.appendChild(buttonText);
+
+            commentText.appendChild(commentNode);
+
+            commentDiv.appendChild(commentText);
+
+            commentDiv.appendChild(deleteButton);
+
+            document.getElementById('postedComments').appendChild(commentDiv);
+
+        };
+
+    });
+
+};
+
+displayNotes();
+
+
+
+
+
 
 
