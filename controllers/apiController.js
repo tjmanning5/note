@@ -9,7 +9,7 @@ module.exports = function (app) {
         Note.create(NewNote, function (err, results) {
 
             res.send(results);
-            
+
             console.log('Post Successful!')
         });
 
@@ -39,8 +39,14 @@ module.exports = function (app) {
 
     });
 
-    app.get('/notes/', function(req, res) {
-        Note.find({}, function(err, note){})
+    app.get('/notes/', function (req, res) {
+
+        Note.find({}, function (err, note) {
+
+            if (err) throw err;
+
+            res.send()
+        })
     })
 
 }

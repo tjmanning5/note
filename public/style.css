@@ -1,0 +1,69 @@
+body {
+    background-color: #EDF5E1;
+    margin: 0px;
+    font-family: "helvetica", sans-serif;
+}
+
+.header h2 {
+    color: #EDF5E1;
+}
+
+.header {
+    background-color: #5CDB95;
+    color: #05386B;    
+    padding: 2px 15px;
+}
+
+.commentBox {
+    background-color: #379683;
+    color: #EDF5E1;
+    height: 200px;
+    width: 550px;
+    border-radius: 20px 20px 20px 3px;
+    padding: 7px;
+    margin: 7px 65px;    
+}
+
+.inputArea {
+    background-color: #8EE4AF;
+    margin-top: -38px;
+}
+
+.postedComments {   
+    background-color:#379683;
+    color: #05386B;
+    padding: 2px;   
+    
+}
+
+.subButton {
+    font-size: 18px;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 0px 10px 5px 10px;
+    background-color: #379683;
+    color: #EDF5E1;
+}
+.subButton:hover {
+    background-color: #05386B;
+    color: #EDF5E1;
+}
+
+.notebookimg {
+    width: 28%;
+    height: 28%;
+    opacity: .2;
+    position: absolute;
+    right: 0px;
+    margin-right: 350px;
+}
+
+.postedNotesTitle {
+    text-align: center;
+}
+
+
+

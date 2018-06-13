@@ -5,25 +5,36 @@
 <head>
     <title>Note Comment</title>
     <script src="app.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div>
+    <div class="header">
         <h1>Note taking app</h1>
+        <h2>Keep your notes in one easy to access spot</h2>
+        <img src="notebook.svg" class="notebookimg">
     </div>
     <br>
-    <div>
+
+
+    <div class="inputArea">
+
         <div>
-            <textarea id="commentBox">Write your comment here</textarea>
+            <textarea id="commentBox" class="commentBox">Write your comment here</textarea>
         </div>
+
         <div>
-            <button id="submit" onclick="save()">Submit</button>
+            <button id="submit" class="subButton" onclick="save()">Post Note</button>
         </div>
-        
+
+
+
+
     </div>
-    <br>
-    <div id="postedComments">
-        
+
+    <div id="postedComments" class="postedComments">
+        <h1 class="postedNotesTitle">Posted Notes</h1>
+
     </div>
 </body>
 
